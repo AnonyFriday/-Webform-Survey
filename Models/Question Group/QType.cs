@@ -13,7 +13,7 @@ namespace SurveyWebform.Models.Question_Group
 
 
         [Required]
-        public int QType_Name { get; set; }
+        public string QType_Name { get; set; }
 
 
         public List<Question> Questions { get; set; }
