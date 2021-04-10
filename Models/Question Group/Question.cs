@@ -14,7 +14,7 @@ namespace SurveyWebform.Models.Question_Group
 
 
         [Required]
-        public int Question_Name { get; set; }
+        public string Question_Name { get; set; }
 
 
         // Relationship

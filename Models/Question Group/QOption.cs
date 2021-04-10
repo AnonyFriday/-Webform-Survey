@@ -14,14 +14,14 @@ namespace SurveyWebform.Models.Question_Group
 
 
         [Required]
-        public int QOption_Name { get; set; }
+        public string QOption_Name { get; set; }
 
 
         [ForeignKey("Questions")]
         public int? Question_Id { get; set; }
         public Question Questions { get; set; }
 
-
+        
         [ForeignKey("Next_Question")]
         public int? Next_Question_Id { get; set; }
         public Question Next_Question { get; set; }
