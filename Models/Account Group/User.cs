@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SurveyWebform.Models.Question_Group;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace SurveyWebform.Models.Account_Group
 
 
         [MaxLength(50)]
-        public string User_FirstNameee { get; set; }
+        public string User_FirstName { get; set; }
 
 
         [MaxLength(50)]
@@ -24,7 +25,11 @@ namespace SurveyWebform.Models.Account_Group
         public DateTime User_DateOfBirth { get; set; }
 
 
-        [RegularExpression(@"\d{10}")]
+        [RegularExpression(@"\d{12}")]
         public string User_Phone { get; set; }
+
+
+        // Relationship
+        public List<Respondent> Respondents { get; set; }
     }
 }

@@ -85,12 +85,14 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202104100657087_survey-V1.cs" />
-    <Compile Include="Migrations\202104100657087_survey-V1.designer.cs">
-      <DependentUpon>202104100657087_survey-V1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account Group\Staff.cs" />
+    <Compile Include="Models\Question Group\Answer.cs" />
+    <Compile Include="Models\Question Group\QOption.cs" />
+    <Compile Include="Models\Question Group\QType.cs" />
+    <Compile Include="Models\Question Group\Question.cs" />
+    <Compile Include="Models\Question Group\Respondent.cs" />
+    <Compile Include="Models\Session Group\Session.cs" />
     <Compile Include="Models\SurveyDbContext.cs" />
     <Compile Include="Models\Account Group\User.cs" />
     <Compile Include="WebForm1.aspx.cs">
@@ -100,13 +102,6 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
-    <Content Include="Models\Question.cs" />
-    <Content Include="Models\QOption.cs" />
-    <Content Include="Models\QType.cs" />
-    <Content Include="Models\Session Group\Answer.cs" />
-    <Content Include="Models\Staff.cs" />
-    <Content Include="Models\Session.cs" />
-    <Content Include="Models\Respondent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -120,12 +115,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
-    <Folder Include="Models\Question Group\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104100657087_survey-V1.resx">
-      <DependentUpon>202104100657087_survey-V1.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
