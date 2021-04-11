@@ -81,10 +81,15 @@
     <Content Include="App_Data\SurveyWebform_log.ldf">
       <DependentUpon>SurveyWebform.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Pages\Admin.aspx" />
+    <Content Include="Pages\EndOfSurvey.aspx" />
     <Content Include="Pages\Survey.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js.js" />
     <Content Include="Styles\styles.css" />
-    <Content Include="UserControls\QuestionCheckbox.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +103,10 @@
     <Compile Include="Migrations\202104110718514_dababase-v1.cs" />
     <Compile Include="Migrations\202104110718514_dababase-v1.designer.cs">
       <DependentUpon>202104110718514_dababase-v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104111024312_database-v2.cs" />
+    <Compile Include="Migrations\202104111024312_database-v2.designer.cs">
+      <DependentUpon>202104111024312_database-v2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account Group\Staff.cs" />
@@ -117,6 +126,13 @@
     <Compile Include="Pages\Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\EndOfSurvey.aspx.cs">
+      <DependentUpon>EndOfSurvey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EndOfSurvey.aspx.designer.cs">
+      <DependentUpon>EndOfSurvey.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Survey.aspx.cs">
       <DependentUpon>Survey.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,16 +142,12 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ultilities\Constants.cs" />
-    <Compile Include="UserControls\QuestionCheckbox.ascx.cs">
-      <DependentUpon>QuestionCheckbox.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControls\QuestionCheckbox.ascx.designer.cs">
-      <DependentUpon>QuestionCheckbox.ascx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Laptop.Master" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -147,10 +159,14 @@
   <ItemGroup>
     <Folder Include="App_Code\" />
     <Folder Include="App_GlobalResources\" />
+    <Folder Include="UserControls\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104110718514_dababase-v1.resx">
       <DependentUpon>202104110718514_dababase-v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104111024312_database-v2.resx">
+      <DependentUpon>202104111024312_database-v2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

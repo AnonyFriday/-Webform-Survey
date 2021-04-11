@@ -16,5 +16,10 @@ namespace SurveyWebform.Ultilities
         public const string QTYPE_DROPDOWN_LIST         = "Drop Down List";
         public const string QTYPE_CHECKBOX_LIST         = "Check Box List";
         public const string QTYPE_TEXTBOX               = "Text Box";
+        public const string CURRENT_QTYPE               = "CURRENT_QTYPE";
+        public const string NEXT_QUESTION_ID            = "NEXT_QUESTION_ID";
+
+        // Answer
+        public const string ANSWER_LIST                 = "ANSWERT_LIST";
     }
 }

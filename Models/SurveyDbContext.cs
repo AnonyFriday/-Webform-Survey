@@ -24,9 +24,7 @@ namespace SurveyWebform.Models
         public DbSet<Question> Questions { get; set; }
         public DbSet<Respondent> Respondents { get; set; }
         public DbSet<Session> Session { get; set; }
-
         #endregion
-
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

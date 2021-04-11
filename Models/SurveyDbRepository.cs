@@ -29,7 +29,7 @@ namespace SurveyWebform.Models
 
 
         // Get List of QOption by current Question
-        public static List<QOption> GetQOptionNameById(int questionId)
+        public static List<QOption> GetQOptionByQuestionId(int questionId)
         {
             return (from option in context.QOptions
                     where option.Question_Id == questionId
@@ -62,9 +62,6 @@ namespace SurveyWebform.Models
 
             return nextQuestionId == null ? null : GetQuestionById((int)nextQuestionId);
         }
-
-
-
 
 
         // Insert Result into the Answer Table

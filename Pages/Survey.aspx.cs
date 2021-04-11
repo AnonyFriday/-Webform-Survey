@@ -12,94 +12,196 @@ namespace SurveyWebform.Pages
 {
     public partial class Home : System.Web.UI.Page
     {
+
+        #region Page_Load
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Stack<int> followUpQuestions = (Stack<int>)Session[Constants.SESSION_FOLLOWUP_QUESTION];
-
-            //if (followUpQuestions == null)
-            //{
-            //    followUpQuestions = new Stack<int>();
-            //    followUpQuestions.Push(1);
-            //    Session["FOLLOWUP_ID_LIST"] = followUpQuestions;
-            //}
-            //else if (followUpQuestions.Count() > 0)
-            //{
-            //    currentQuestionIdInSession = followUpQuestions.Peek();
-            //    // Read Question ID Now
-
-            //}
-
+            Stack<int> followUpQuestions = (Stack<int>)Session[Constants.SESSION_FOLLOWUP_QUESTION];
             int currentQuestionIdInSession = 1;
-            Question currentQuestion = SurveyDbRepository.GetQuestionById(currentQuestionIdInSession);
-            var qOptions = SurveyDbRepository.GetQOptionNameById(currentQuestion.Question_Id);
 
-            foreach(var name in qOptions)
+            if (followUpQuestions == null)
             {
-                Console.WriteLine(name);
+                followUpQuestions = new Stack<int>();
+                followUpQuestions.Push(1);
+                Session[Constants.SESSION_FOLLOWUP_QUESTION] = followUpQuestions;
+            }
+            else if (followUpQuestions.Count() > 0)
+            {
+                currentQuestionIdInSession = followUpQuestions.Peek();
             }
 
-            QType qType = SurveyDbRepository.GetQTypeByQuestionId(currentQuestion.Question_Id);
+            GetCurrentQuestionContext(currentQuestionIdInSession);
+        }
+        #endregion
 
+
+        #region Methods
+        private void GetCurrentQuestionContext(int currentQuestionIdInSession)
+        {
+            var currentQuestion = SurveyDbRepository.GetQuestionById(currentQuestionIdInSession);
+            var qOptions = SurveyDbRepository.GetQOptionByQuestionId(currentQuestionIdInSession);
+            var qType = SurveyDbRepository.GetQTypeByQuestionId(currentQuestionIdInSession);
 
             if (currentQuestion != null && qType != null)
             {
                 QuestionLabel.Text = currentQuestion.Question_Name;
+
                 switch (qType.QType_Name)
                 {
                     case Constants.QTYPE_CHECKBOX_LIST:
                         CheckBoxList cbl = new CheckBoxList();
-                        cbl.DataSource = qOptions;
-                  
                         cbl.ID = Constants.QTYPE_CHECKBOX_LIST;
-                        cbl.DataTextField = "QOption_Name";
-                        cbl.DataValueField = "QOption_Name";
-                        cbl.DataBind();
+
+                        foreach (var option in qOptions)
+                        {
+                            ListItem item = new ListItem();
+                            item.Text = option.QOption_Name;
+                            item.Value = option.QOption_Id.ToString();
+
+                            if (option.Next_Question_Id != null)
+                            {
+                                item.Attributes[Constants.NEXT_QUESTION_ID] = option.Next_Question_Id.ToString();
+                            }
+                                
+                            cbl.Items.Add(item);
+                        }
+
                         ControlPHolder.Controls.Add(cbl);
+                        Session[Constants.CURRENT_QTYPE] = cbl.ID;
                         break;
+
                     case Constants.QTYPE_DROPDOWN_LIST:
                         DropDownList ddl = new DropDownList();
-                        ddl.DataSource = qOptions;
                         ddl.ID = Constants.QTYPE_DROPDOWN_LIST;
-                        ddl.DataTextField = "QOption_Name";
-                        ddl.DataValueField = "QOption_Name";
-                        ddl.DataBind();
+
+                        foreach (var option in qOptions)
+                        {
+                            ListItem item = new ListItem();
+                            item.Text = option.QOption_Name;
+                            item.Value = option.QOption_Id.ToString();
+
+                            if (option.Next_Question_Id != null)
+                            {
+                                item.Attributes[Constants.NEXT_QUESTION_ID] = option.Next_Question_Id.ToString();
+                            }
+
+                            ddl.Items.Add(item);
+                        }
+
                         ControlPHolder.Controls.Add(ddl);
+                        Session[Constants.CURRENT_QTYPE] = ddl.ID;
                         break;
                     case Constants.QTYPE_TEXTBOX:
                         TextBox tb = new TextBox();
+
                         tb.ID = Constants.QTYPE_TEXTBOX;
+
                         ControlPHolder.Controls.Add(tb);
+                        Session[Constants.CURRENT_QTYPE] = tb.ID;
                         break;
                     default:
                         break;
                 }
             }
         }
+   
 
-        public void insertNextQuestion(int currentQuestionId, int currentQOptionId, Stack<int> followupList)
+
+        
+        public void InsertCurrentQuestionToStack(int currentQuestionId, Stack<int> followUpQuestion)
         {
-            Question nextQuestion = SurveyDbRepository.GetNextQuestion(currentQuestionId, currentQOptionId);
-
-            if (nextQuestion == null)
+            // In case select mutliple QOption with the same Next Question Id
+            if (!followUpQuestion.Contains(currentQuestionId))
             {
+                followUpQuestion.Push(currentQuestionId);
+            }
+        }
+        #endregion
+
+
+        #region Button Click
+        protected void NextButton_Click(object sender, EventArgs e)
+        {
+            // Finding the User Control, retrieve the value from controls
+            var userControl = ControlPHolder.FindControl(Session[Constants.CURRENT_QTYPE].ToString());
+
+
+            List<Answer> answers = (List<Answer>)Session[Constants.ANSWER_LIST];
+            if (answers != null)
+            {
+                answers = new List<Answer>();
+                Session[Constants.ANSWER_LIST] = answers;
+            }
+
+
+            // Retrieve back the Stack
+            Stack<int> followUpQuestionList = (Stack<int>)Session[Constants.SESSION_FOLLOWUP_QUESTION];
+            int currentQuestionIdInSession = followUpQuestionList.Pop();
+            Question question = SurveyDbRepository.GetQuestionById(currentQuestionIdInSession);
+
+            // Push the next question
+            if (question.Next_Question_Id != null)
+            {
+                InsertCurrentQuestionToStack((int)question.Next_Question_Id, followUpQuestionList);
+            }
+
+
+
+            // Determine the next question id of the option
+            if (userControl is TextBox)
+            {
+                TextBox textBox = (TextBox)userControl;
+
 
             }
 
-            // In case select mutliple QOption with the same Next Question Id
-            //if (followupList.Contains(nextQuestion.Question_Id))
-            //{
-            //    followupList.Push(nextQuestion.Question_Id);
-            //}
+            else if (userControl is CheckBoxList)
+            {
+                CheckBoxList checkBoxList = (CheckBoxList)userControl;
+                foreach (ListItem item in checkBoxList.Items)
+                {
+                    if (item.Selected)
+                    {
+                        if (item.Attributes[Constants.NEXT_QUESTION_ID] != null)
+                        {
+                            int nextQuestionId = int.Parse(item.Attributes[Constants.NEXT_QUESTION_ID]);
+                            InsertCurrentQuestionToStack(nextQuestionId, followUpQuestionList);
+                        }
+                    }
+                }
 
-            QuestionLabel.Text = "Wallaaa nothing";
+                // Adding to The Answer
+            }
+
+            else if (userControl is DropDownList)
+            {
+                DropDownList dropdownList = (DropDownList)userControl;
+                foreach (ListItem item in dropdownList.Items)
+                {
+                    if (item.Selected)
+                    {
+                        if (item.Attributes[Constants.NEXT_QUESTION_ID] != null)
+                        {
+
+                            int nextQuestionId = int.Parse(item.Attributes[Constants.NEXT_QUESTION_ID]);
+                            InsertCurrentQuestionToStack(nextQuestionId, followUpQuestionList);
+                        }
+                    }
+                }
+            }
+
+
+
+            // Determine the last question
+            if (followUpQuestionList.Count() > 0)
+            {
+                Response.Redirect("~/Pages/Survey.aspx");
+            }
+            else
+            {
+                Response.Redirect("~/Pages/EndOfSurvey.aspx");
+            }
         }
-
-        protected void NextButton_Click(object sender, EventArgs e)
-        {
-            Stack<int> followUpQuestions = (Stack<int>)Session["FOLLOWUP_ID_LIST"];
-            int currentQuestionId = followUpQuestions.Pop();
-
-            insertNextQuestion(1, 20, followUpQuestions);
-        }
+        #endregion
     }
 }

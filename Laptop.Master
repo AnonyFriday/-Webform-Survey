@@ -2,35 +2,51 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head runat="server">
-    <title>
-     
-    </title>
+    <title></title>
+    <!--Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <!--Header-->
     <header>
-        <nav>
-            <ul>
-                <li><a href="/pages/Home.aspx">Home</a></li>
-                 <li><a href="/pages/Admin.aspx">Home</a></li>
-            </ul>
-        </nav>
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="~/Pages/Admin.aspx">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Pages/Survey.aspx">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
+
+
+
     <form id="form1" runat="server">
-        <main>
+        <div class="container-fluid">
             <asp:ContentPlaceHolder
                 ID="content"
                 runat="server">
             </asp:ContentPlaceHolder>
-        </main>
+        </div>
     </form>
+
     <!--Footer-->
     <footer>
-
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
 </body>
 </html>
