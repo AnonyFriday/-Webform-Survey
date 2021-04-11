@@ -25,7 +25,15 @@ namespace SurveyWebform.Models.Question_Group
 
 
         public List<Answer> Answers { get; set; }
-        public List<QOption> QOptions { get; set; } 
+       
         public List<Respondent> Respondents { get; set; }
+
+
+        [InverseProperty("Questions")]
+        public List<QOption> Question_Options { get; set; }
+
+
+        [InverseProperty("Next_Question")]
+        public List<QOption> Next_Question_Options { get; set; }
     }
 }

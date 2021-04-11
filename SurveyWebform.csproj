@@ -81,8 +81,11 @@
     <Content Include="App_Data\SurveyWebform_log.ldf">
       <DependentUpon>SurveyWebform.mdf</DependentUpon>
     </Content>
+    <Content Include="Pages\Admin.aspx" />
+    <Content Include="Pages\Survey.aspx" />
+    <Content Include="Styles\styles.css" />
+    <Content Include="UserControls\QuestionCheckbox.ascx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Laptop.Master.cs">
@@ -92,13 +95,9 @@
     <Compile Include="Laptop.Master.designer.cs">
       <DependentUpon>Laptop.Master</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104101322408_database-v2.cs" />
-    <Compile Include="Migrations\202104101322408_database-v2.designer.cs">
-      <DependentUpon>202104101322408_database-v2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104101343538_database-v3.cs" />
-    <Compile Include="Migrations\202104101343538_database-v3.designer.cs">
-      <DependentUpon>202104101343538_database-v3.cs</DependentUpon>
+    <Compile Include="Migrations\202104110718514_dababase-v1.cs" />
+    <Compile Include="Migrations\202104110718514_dababase-v1.designer.cs">
+      <DependentUpon>202104110718514_dababase-v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account Group\Staff.cs" />
@@ -111,13 +110,28 @@
     <Compile Include="Models\SurveyDbContext.cs" />
     <Compile Include="Models\Account Group\User.cs" />
     <Compile Include="Models\SurveyDbRepository.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Pages\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Pages\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Survey.aspx.cs">
+      <DependentUpon>Survey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Survey.aspx.designer.cs">
+      <DependentUpon>Survey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ultilities\Constants.cs" />
+    <Compile Include="UserControls\QuestionCheckbox.ascx.cs">
+      <DependentUpon>QuestionCheckbox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\QuestionCheckbox.ascx.designer.cs">
+      <DependentUpon>QuestionCheckbox.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -135,11 +149,8 @@
     <Folder Include="App_GlobalResources\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104101322408_database-v2.resx">
-      <DependentUpon>202104101322408_database-v2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104101343538_database-v3.resx">
-      <DependentUpon>202104101343538_database-v3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104110718514_dababase-v1.resx">
+      <DependentUpon>202104110718514_dababase-v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

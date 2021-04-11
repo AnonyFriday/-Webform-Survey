@@ -4,20 +4,33 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>
+     
+    </title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <!--Header-->
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/pages/Home.aspx">Home</a></li>
+                 <li><a href="/pages/Admin.aspx">Home</a></li>
+            </ul>
+        </nav>
+    </header>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+        <main>
+            <asp:ContentPlaceHolder
+                ID="content"
+                runat="server">
             </asp:ContentPlaceHolder>
-        </div>
+        </main>
     </form>
-
     <!--Footer-->
+    <footer>
+
+    </footer>
 </body>
 </html>
