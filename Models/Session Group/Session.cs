@@ -17,9 +17,7 @@ namespace SurveyWebform.Models.Session_Group
         public int Respondent_Id { get; set; }
         public Respondent Respondents { get; set; }
 
-
         public DateTime Session_CreatedAt { get; set; }
-
         public String Session_IpAddress { get; set; }
 
     }

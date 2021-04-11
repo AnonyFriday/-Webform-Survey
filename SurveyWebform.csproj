@@ -110,6 +110,7 @@
     <Compile Include="Models\Session Group\Session.cs" />
     <Compile Include="Models\SurveyDbContext.cs" />
     <Compile Include="Models\Account Group\User.cs" />
+    <Compile Include="Models\SurveyDbRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
