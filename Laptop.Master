@@ -10,6 +10,8 @@
 
 
     <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/styles.css" rel="stylesheet" type="text/css" />
+
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -21,10 +23,10 @@
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="~/Pages/Admin.aspx">Admin</a>
+                        <a class="nav-link active" href="/Pages/Admin.aspx">Admin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="~/Pages/Survey.aspx">Survey</a>
+                        <a class="nav-link" href="/Pages/Survey.aspx">Survey</a>
                     </li>
                 </ul>
             </div>
@@ -32,12 +34,10 @@
     </header>
 
     <form id="form1" runat="server">
-        <div class="container-fluid">
-            <asp:ContentPlaceHolder
-                ID="content"
-                runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
+        <asp:ContentPlaceHolder
+            ID="content"
+            runat="server">
+        </asp:ContentPlaceHolder>
     </form>
 
     <!--Footer-->
