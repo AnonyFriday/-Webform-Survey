@@ -11,7 +11,7 @@ namespace SurveyWebform.Models
     public partial class SurveyDbContext : DbContext
     {
         public SurveyDbContext()
-            : base("name=SurveyDbContext")
+            : base("name=SurveyDbContextEntityModel")
         {
         }
 

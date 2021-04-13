@@ -100,13 +100,9 @@
     <Compile Include="Laptop.Master.designer.cs">
       <DependentUpon>Laptop.Master</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104110718514_dababase-v1.cs" />
-    <Compile Include="Migrations\202104110718514_dababase-v1.designer.cs">
-      <DependentUpon>202104110718514_dababase-v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104111024312_database-v2.cs" />
-    <Compile Include="Migrations\202104111024312_database-v2.designer.cs">
-      <DependentUpon>202104111024312_database-v2.cs</DependentUpon>
+    <Compile Include="Migrations\202104130822352_database-v1.cs" />
+    <Compile Include="Migrations\202104130822352_database-v1.designer.cs">
+      <DependentUpon>202104130822352_database-v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account Group\Staff.cs" />
@@ -162,11 +158,8 @@
     <Folder Include="UserControls\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104110718514_dababase-v1.resx">
-      <DependentUpon>202104110718514_dababase-v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104111024312_database-v2.resx">
-      <DependentUpon>202104111024312_database-v2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104130822352_database-v1.resx">
+      <DependentUpon>202104130822352_database-v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

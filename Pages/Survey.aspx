@@ -10,6 +10,10 @@
         .auto-style2 {
             font-size: xx-large;
         }
+        .auto-style3 {
+            text-align: center;
+            background-color: #FFFFFF;
+        }
     </style>
 </asp:Content>
 
@@ -26,19 +30,19 @@
 
                     <table class="auto-style1">
                         <tr>
-                            <td class="text-center">
-                                <strong>
+                            <td class="auto-style3">
+                                <h1><strong>
                                 <asp:Label ID="QuestionLabel" runat="server" Text="Question Text" CssClass="auto-style2"></asp:Label>
-                                </strong>
+                                    </strong></h1>
                             </td>
                         </tr>
                         <tr>
-                            <td class="text-center">
+                            <td class="auto-style3">
                                 <asp:PlaceHolder ID="ControlPHolder" runat="server"></asp:PlaceHolder>
                             </td>
                         </tr>
                         <tr>
-                            <td  class="text-center">
+                            <td  class="auto-style3">
                                 <asp:Button styles="display: block" class="btn btn-primary" ID="NextButton" runat="server" OnClick="NextButton_Click" Text="Next Button" Width="193px" />
                             </td>
                         </tr>
