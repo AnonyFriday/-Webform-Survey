@@ -7,9 +7,9 @@ using System.Web;
 
 namespace SurveyWebform.Models
 {
-    public class SurveyDbRepository
+    public class QuestionRepository
     {
-        private static SurveyDbContext context = new SurveyDbContext();
+        private static readonly SurveyDbContext context = new SurveyDbContext();
 
         // Get all Questions
         public static List<Question> GetQuestionList()
@@ -67,5 +67,6 @@ namespace SurveyWebform.Models
         // Insert Result into the Answer Table
         // Example: Q: 6 QO: 20
 
+        
     }
 }

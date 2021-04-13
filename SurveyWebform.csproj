@@ -107,10 +107,11 @@
     <Compile Include="Models\Question Group\QType.cs" />
     <Compile Include="Models\Question Group\Question.cs" />
     <Compile Include="Models\Question Group\Respondent.cs" />
+    <Compile Include="Models\RespondentRepository.cs" />
     <Compile Include="Models\Session Group\Session.cs" />
     <Compile Include="Models\SurveyDbContext.cs" />
     <Compile Include="Models\Account Group\User.cs" />
-    <Compile Include="Models\SurveyDbRepository.cs" />
+    <Compile Include="Models\QuestionRepository.cs" />
     <Compile Include="Pages\Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -18,7 +18,7 @@
 </head>
 <body>
     <!--Header-->
-    <header>
+    <header class="container">
         <div class="card text-center">
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
@@ -33,15 +33,17 @@
         </div>
     </header>
 
-    <form id="form1" runat="server">
-        <asp:ContentPlaceHolder
-            ID="content"
-            runat="server">
-        </asp:ContentPlaceHolder>
-    </form>
+    <main>
+        <form id="form1" runat="server" class="container">
+            <asp:ContentPlaceHolder
+                ID="content"
+                runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </main>
 
     <!--Footer-->
-    <footer>
+    <footer class="container">
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>

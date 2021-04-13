@@ -10,7 +10,7 @@
             justify-content: space-between;
             align-items: center;
             font-size: 1em;
-            height: 20vh;
+            height: 300px;
         }
 
         .survey__title {
@@ -26,7 +26,11 @@
         
         input[type=checkbox] {
             margin-right: 2em;
+        }
 
+        tr,select,input {
+            display: block
+            padding: 20px;
         }
     </style>
 </asp:Content>

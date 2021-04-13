@@ -38,9 +38,9 @@ namespace SurveyWebform.Pages
         #region Methods
         private void GetCurrentQuestionContext(int currentQuestionIdInSession)
         {
-            var currentQuestion = SurveyDbRepository.GetQuestionById(currentQuestionIdInSession);
-            var qOptions = SurveyDbRepository.GetQOptionByQuestionId(currentQuestionIdInSession);
-            var qType = SurveyDbRepository.GetQTypeByQuestionId(currentQuestionIdInSession);
+            var currentQuestion = QuestionRepository.GetQuestionById(currentQuestionIdInSession);
+            var qOptions = QuestionRepository.GetQOptionByQuestionId(currentQuestionIdInSession);
+            var qType = QuestionRepository.GetQTypeByQuestionId(currentQuestionIdInSession);
 
             if (currentQuestion != null && qType != null)
             {
@@ -137,7 +137,7 @@ namespace SurveyWebform.Pages
             // Retrieve back the Stack
             Stack<int> followUpQuestionList = (Stack<int>)Session[Constants.SESSION_FOLLOWUP_QUESTION];
             int currentQuestionIdInSession = followUpQuestionList.Pop();
-            Question question = SurveyDbRepository.GetQuestionById(currentQuestionIdInSession);
+            Question question = QuestionRepository.GetQuestionById(currentQuestionIdInSession);
 
             // Push the next question
             if (question.Next_Question_Id != null)
