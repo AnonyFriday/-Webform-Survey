@@ -1,9 +1,6 @@
 ﻿using SurveyWebform.Models.Question_Group;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace SurveyWebform.Models.Session_Group
 {

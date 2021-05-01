@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace SurveyWebform.Models.Question_Group
 {
- 
+
     public class QType
     {
         [Key]
@@ -19,6 +16,6 @@ namespace SurveyWebform.Models.Question_Group
 
         public List<Question> Questions { get; set; }
 
-        
+
     }
 }

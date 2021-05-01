@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="Survey" Language="C#" MasterPageFile="~/Laptop.Master" AutoEventWireup="true" CodeBehind="Survey.aspx.cs" Inherits="SurveyWebform.Pages.Home" %>
-
 <%@ Register Src="~/UserControls/QuestionUserControl.ascx" TagPrefix="survey" TagName="QuestionUserControl" %>
 
 

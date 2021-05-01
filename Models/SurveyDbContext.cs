@@ -1,10 +1,7 @@
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
-using System.Linq;
 using SurveyWebform.Models.Account_Group;
 using SurveyWebform.Models.Question_Group;
 using SurveyWebform.Models.Session_Group;
+using System.Data.Entity;
 
 namespace SurveyWebform.Models
 {

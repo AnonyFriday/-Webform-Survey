@@ -4,9 +4,6 @@ using SurveyWebform.Ultilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SurveyWebform.Pages
 {
@@ -14,7 +11,7 @@ namespace SurveyWebform.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 ShowAnswerGridViewBeforeSave();
             }
@@ -48,7 +45,8 @@ namespace SurveyWebform.Pages
                     }
                     id_LabelStatus.Text = "Save Successfully! ";
                 }
-            } else
+            }
+            else
             {
                 id_LabelStatus.Text = "Something Wrong!. Please try again";
             }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace SurveyWebform.Ultilities
+﻿namespace SurveyWebform.Ultilities
 {
     public static class Constants
     {
@@ -16,7 +11,7 @@ namespace SurveyWebform.Ultilities
         public const string QTYPE_DROPDOWN_LIST = "Drop Down List";
         public const string QTYPE_CHECKBOX_LIST = "Check Box List";
         public const string QTYPE_TEXTBOX = "Text Box";
-    
+
 
 
         // Answer
