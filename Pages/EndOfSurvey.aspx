@@ -1,23 +1,51 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Laptop.Master" AutoEventWireup="true" CodeBehind="EndOfSurvey.aspx.cs" Inherits="SurveyWebform.Pages.EndOfSurvey" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .gridView {
+            margin: 50px auto 0 auto;
+        }
+
+        .answers__button {
+            margin: 30px auto 0 auto;
+            display: block;
+            width: 400px;
+        }
+
+        .answers__status-label {
+            font-size: 30px;
+            line-height: 40px;
+            height: 40px;
+            display: inline-block;
+            margin-top: 80px;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="id_ContentPlaceHolder" runat="server">
+    <div class="container text-center">
+        <asp:Label ID="id_LabelStatus" class="answers__status-label" runat="server" Text=""></asp:Label>
+        <div class="gridView">
+            <asp:GridView ID="id_AnswerResultGridView" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="100%" Width="100%" AutoGenerateColumns="False" AllowSorting="True" HorizontalAlign="Center">
+                <AlternatingRowStyle BackColor="#CCCCCC" />
+                <Columns>
+                    <asp:BoundField DataField="QOption_Id" HeaderText="QOption_Id" SortExpression="QOption_Id" />
+                    <asp:BoundField DataField="QOption_TextBoxValue" HeaderText="QOption_TextBoxValue" SortExpression="QOption_TextBoxValue" />
+                    <asp:BoundField DataField="Question_Id" HeaderText="Question_Id" SortExpression="Question_Id" />
+                </Columns>
+                <EditRowStyle BorderColor="#FFCCFF" BorderWidth="1px" />
+                <FooterStyle BackColor="#CCCCCC" />
+                <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#808080" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#383838" />
+            </asp:GridView>
+        </div>
 
-
-
-
-    <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Height="183px" Width="217px">
-        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-        <SortedAscendingCellStyle BackColor="#F7F7F7" />
-        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-        <SortedDescendingCellStyle BackColor="#E5E5E5" />
-        <SortedDescendingHeaderStyle BackColor="#242121" />
-    </asp:GridView>
-
-
-
-
+        <asp:Button class="btn btn-outline-primary answers__button" ID="id_ButtonSaveSurvey" OnClick="ButtonSaveSurvey_Click" runat="server" Text="Save Survey" />
+    </div>
 </asp:Content>

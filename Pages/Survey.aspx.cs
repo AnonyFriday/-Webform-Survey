@@ -132,13 +132,12 @@ namespace SurveyWebform.Pages
         }
         #endregion
 
-
         #region Button Click
         protected void NextButton_Click(object sender, EventArgs e)
         {
             // Finding the User Control, retrieve the value from controls
             Control userControl = id_QuestionUserControl.PlaceHolderControls.FindControl(Session[Constants.SESSION_CURRENT_QTYPE].ToString());
-            
+
             List<Answer> answers = (List<Answer>)Session[Constants.SESSION_ANSWER_LIST];
             if (answers == null)
             {
@@ -198,9 +197,8 @@ namespace SurveyWebform.Pages
                 }
             }
 
-            else if (userControl is DropDownList)
+            else if (userControl is DropDownList dropdownList)
             {
-                DropDownList dropdownList = (DropDownList)userControl;
                 foreach (ListItem item in dropdownList.Items)
                 {
                     if (item.Selected)
@@ -224,7 +222,7 @@ namespace SurveyWebform.Pages
             }
 
             Session[Constants.SESSION_ANSWER_LIST] = answers;
-     
+
 
             // Determine the last question
             if (followUpQuestionList.Count() > 0)

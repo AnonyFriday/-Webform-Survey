@@ -15,12 +15,30 @@ namespace SurveyWebform.Pages
     {
 
         /// <summary>
-        /// GridView1 control.
+        /// id_LabelStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label id_LabelStatus;
+
+        /// <summary>
+        /// id_AnswerResultGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView id_AnswerResultGridView;
+
+        /// <summary>
+        /// id_ButtonSaveSurvey control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button id_ButtonSaveSurvey;
     }
 }

@@ -90,6 +90,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\SurveyController.cs" />
     <Compile Include="Laptop.Master.cs">
       <DependentUpon>Laptop.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -111,6 +112,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account Group\Staff.cs" />
+    <Compile Include="Models\AnswerRepository.cs" />
     <Compile Include="Models\Question Group\Answer.cs" />
     <Compile Include="Models\Question Group\QOption.cs" />
     <Compile Include="Models\Question Group\QType.cs" />

@@ -64,9 +64,6 @@ namespace SurveyWebform.Models
         }
 
 
-        // Insert Result into the Answer Table
-        // Example: Q: 6 QO: 20
-
-        
+     
     }
 }
