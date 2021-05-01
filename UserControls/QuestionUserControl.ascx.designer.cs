@@ -7,38 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SurveyWebform
+namespace SurveyWebform.UserControls
 {
 
 
-    public partial class Laptop
+    public partial class QuestionUserControl
     {
 
         /// <summary>
-        /// head control.
+        /// id_headerQuestionTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl id_headerQuestionTitle;
 
         /// <summary>
-        /// id_FormContent control.
+        /// id_placeholderControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm id_FormContent;
-
-        /// <summary>
-        /// id_ContentPlaceHolder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder id_ContentPlaceHolder;
+        protected global::System.Web.UI.WebControls.PlaceHolder id_placeholderControl;
     }
 }

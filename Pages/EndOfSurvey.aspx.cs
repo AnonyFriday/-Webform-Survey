@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SurveyWebform.Models.Question_Group;
+using SurveyWebform.Ultilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,11 @@ namespace SurveyWebform.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            List<Answer> answersSession = (List<Answer>)Session[Constants.SESSION_ANSWER_LIST];
+            foreach(var item in answersSession)
+            {
+                
+            }
         }
     }
 }

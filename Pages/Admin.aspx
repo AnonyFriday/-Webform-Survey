@@ -27,7 +27,7 @@
 </asp:Content>
 
 
-<asp:Content ID="Content3" ContentPlaceHolderID="content" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="id_ContentPlaceHolder" runat="server">
     <div class="controls">
         <div class="controls__searchs">
             <div class="controls__bankUsed control">
@@ -83,6 +83,5 @@
             </asp:GridView>
             <asp:ObjectDataSource ID="RespondentObjectDataSource" runat="server" SelectMethod="GetAllRespondents" TypeName="SurveyWebform.Models.RespondentRepository"></asp:ObjectDataSource>
         </div>
-
     </div>
 </asp:Content>

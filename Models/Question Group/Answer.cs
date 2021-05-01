@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -13,10 +14,14 @@ namespace SurveyWebform.Models.Question_Group
         public int Answer_Id { get; set; }
 
 
-        [Required]
         [ForeignKey("QOptions")]
-        public int QOption_Id { get; set; }
+        [DefaultValue(null)]
+        public int? QOption_Id { get; set; }
         public QOption QOptions { get; set; }
+
+
+        [DefaultValue(null)]
+        public string QOption_TextBoxValue { get; set; }
 
 
         [Required]
@@ -25,8 +30,8 @@ namespace SurveyWebform.Models.Question_Group
         public Question Questions { get; set; }
 
 
-
         // Relationship
         public List<Respondent> Respondents { get; set; }
+
     }
 }
