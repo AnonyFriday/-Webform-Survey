@@ -23,7 +23,7 @@ namespace SurveyWebform.Models.Account_Group
         public DateTime User_DateOfBirth { get; set; }
 
 
-        [RegularExpression(@"\d{12}")]
+        [RegularExpression(@"\d+")]
         public string User_Phone { get; set; }
 
 

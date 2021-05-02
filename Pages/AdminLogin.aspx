@@ -55,7 +55,6 @@
 
 
         .login__labelStatus {
-        
             color: red;
             line-height: 30px;
             height: 30px;

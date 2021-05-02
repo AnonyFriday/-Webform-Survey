@@ -15,22 +15,31 @@ namespace SurveyWebform.UserControls
     {
 
         /// <summary>
-        /// id_LabelFirstname control.
+        /// id_LabelFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label id_LabelFirstname;
+        protected global::System.Web.UI.WebControls.Label id_LabelFirstName;
 
         /// <summary>
-        /// id_TextBoxFirstname control.
+        /// id_TextBoxFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox id_TextBoxFirstname;
+        protected global::System.Web.UI.WebControls.TextBox id_TextBoxFirstName;
+
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
         /// id_LabelLastName control.
@@ -51,6 +60,15 @@ namespace SurveyWebform.UserControls
         protected global::System.Web.UI.WebControls.TextBox id_TextBoxLastName;
 
         /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+
+        /// <summary>
         /// id_LabelPhone control.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,15 @@ namespace SurveyWebform.UserControls
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox id_TextBoxPhone;
+
+        /// <summary>
+        /// RangeValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
 
         /// <summary>
         /// id_LabelDOB control.
@@ -87,6 +114,15 @@ namespace SurveyWebform.UserControls
         protected global::System.Web.UI.WebControls.TextBox id_TextBoxDOB;
 
         /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+
+        /// <summary>
         /// id_CalendarDOB control.
         /// </summary>
         /// <remarks>
@@ -94,5 +130,14 @@ namespace SurveyWebform.UserControls
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar id_CalendarDOB;
+
+        /// <summary>
+        /// ValidationSummary1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
     }
 }

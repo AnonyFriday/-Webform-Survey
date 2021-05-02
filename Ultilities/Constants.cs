@@ -23,7 +23,7 @@ namespace SurveyWebform.Ultilities
         // Question Type
         public const string QTYPE_DROPDOWN_LIST = "Drop Down List";
         public const string QTYPE_CHECKBOX_LIST = "Check Box List";
-        public const string QTYPE_TEXTBOX       = "Text Box";
+        public const string QTYPE_TEXTBOX = "Text Box";
 
 
         // Absolute URL Location in Pages
@@ -31,6 +31,7 @@ namespace SurveyWebform.Ultilities
         public const string URL_ADMIN_LOGIN = "~/Pages/AdminLogin.aspx";
         public const string URL_END_OF_SURVEY = "~/Pages/EndOfSurvey.aspx";
         public const string URL_SURVEY = "~/Pages/Survey.aspx";
-
+        public const string URL_WELCOME = "~/Pages/Welcome.aspx";
+        public const string URL_REGISTER_MEMBER_PROGRAM = "~/Pages/RegisterMemberProgram.aspx";
     }
 }

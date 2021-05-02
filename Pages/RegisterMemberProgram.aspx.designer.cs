@@ -15,13 +15,13 @@ namespace SurveyWebform.Pages
     {
 
         /// <summary>
-        /// RegisterMembershipUserControl control.
+        /// id_RegisterMembershipUserControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SurveyWebform.UserControls.RegisterMembershipUserControl RegisterMembershipUserControl;
+        protected global::SurveyWebform.UserControls.RegisterMembershipUserControl id_RegisterMembershipUserControl;
 
         /// <summary>
         /// id_ButtonRegister control.
@@ -31,5 +31,14 @@ namespace SurveyWebform.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button id_ButtonRegister;
+
+        /// <summary>
+        /// id_LabelStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label id_LabelStatus;
     }
 }
