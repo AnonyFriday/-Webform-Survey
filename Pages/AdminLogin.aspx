@@ -12,15 +12,15 @@
             padding: 20px;
             border-radius: 10px;
             width: 600px;
-            height: 200px;
+            height: 300px;
         }
 
 
         .login__wrap {
             width: 100%;
             display: flex;
-            align-items:center;
-            justify-content:space-between;
+            align-items: center;
+            justify-content: space-between;
             line-height: 40px;
         }
 
@@ -39,7 +39,7 @@
             display: inline-block;
             width: calc(100% - 30px - 150px);
             padding-left: 20px;
-            padding-right:10px;
+            padding-right: 10px;
             border-radius: 10px;
         }
 
@@ -52,6 +52,17 @@
             color: white;
             background-color: #2F52E0;
         }
+
+
+        .login__labelStatus {
+        
+            color: red;
+            line-height: 30px;
+            height: 30px;
+            font-size: 25px;
+            display: inline-block;
+            margin: 30px auto;
+        }
     </style>
 </asp:Content>
 
@@ -60,7 +71,8 @@
     <div class="container">
         <div class="login__form">
             <survey:LoginUserControl runat="server" ID="id_LoginUserControl" />
-            <asp:Button ID="id_ButtonLogin" runat ="server" class="btn btn-outline-primary login__button" Text="Sign in" OnClick="ButtonLogin_Click"/>
+            <asp:Button ID="id_ButtonLogin" runat="server" class="btn btn-outline-primary login__button" Text="Sign in" OnClick="ButtonLogin_Click" />
+            <asp:Label ID="id_LabelStatus" runat="server" CssClass="login__labelStatus"></asp:Label>
         </div>
     </div>
 </asp:Content>

@@ -15,6 +15,10 @@ namespace SurveyWebform.UserControls
             {
                 return id_TextBoxUsername.Text;
             }
+            set
+            {
+                id_TextBoxUsername.Text = value;
+            }
         }
 
         public string PasswordTextBox
@@ -22,6 +26,10 @@ namespace SurveyWebform.UserControls
             get
             {
                 return id_TextBoxPassword.Text;
+            }
+            set
+            {
+                id_TextBoxPassword.Text = value;
             }
         }
 

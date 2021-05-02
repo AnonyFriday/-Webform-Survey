@@ -15,40 +15,40 @@ namespace SurveyWebform.Pages
     {
 
         /// <summary>
-        /// DropDownList1 control.
+        /// id_BankDDList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList id_BankDDList;
 
         /// <summary>
-        /// DropDownList2 control.
+        /// id_AgeDDList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList id_AgeDDList;
 
         /// <summary>
-        /// DropDownList3 control.
+        /// id_StateDDList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.DropDownList id_StateDDList;
 
         /// <summary>
-        /// DropDownList4 control.
+        /// id_GenderDDList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList4;
+        protected global::System.Web.UI.WebControls.DropDownList id_GenderDDList;
 
         /// <summary>
         /// GridView1 control.
@@ -58,14 +58,5 @@ namespace SurveyWebform.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
-        /// RespondentObjectDataSource control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource RespondentObjectDataSource;
     }
 }

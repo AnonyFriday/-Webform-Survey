@@ -11,34 +11,25 @@ namespace SurveyWebform.Pages
 {
 
 
-    public partial class AdminLogin
+    public partial class RegisterMemberProgram
     {
 
         /// <summary>
-        /// id_LoginUserControl control.
+        /// RegisterMembershipUserControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SurveyWebform.UserControls.LoginUserControl id_LoginUserControl;
+        protected global::SurveyWebform.UserControls.RegisterMembershipUserControl RegisterMembershipUserControl;
 
         /// <summary>
-        /// id_ButtonLogin control.
+        /// id_ButtonRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button id_ButtonLogin;
-
-        /// <summary>
-        /// id_LabelStatus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label id_LabelStatus;
+        protected global::System.Web.UI.WebControls.Button id_ButtonRegister;
     }
 }

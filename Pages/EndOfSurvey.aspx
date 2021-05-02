@@ -21,6 +21,12 @@
             text-transform: uppercase;
             font-weight: bolder;
         }
+
+        .registerUser__button {
+            margin: 30px auto 0 auto;
+            display: block;
+            width: 400px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="id_ContentPlaceHolder" runat="server">
@@ -46,6 +52,8 @@
             </asp:GridView>
         </div>
 
-        <asp:Button class="btn btn-outline-primary answers__button" ID="id_ButtonSaveSurvey" OnClick="ButtonSaveSurvey_Click" runat="server" Text="Save Survey" />
+        <asp:Button class="btn btn-outline-success answers__button" ID="id_ButtonSaveSurvey" OnClick="ButtonSaveSurvey_Click" runat="server" Text="Save Survey" />
+        <asp:Button class="btn btn-outline-primary answers__button" ID="id_ButtonRegisterUser" OnClick="ButtonRegisterUser_Click" runat="server" Text="Register Member Program" />
+        <asp:Button class="btn btn-outline-secondary answers__button" ID="id_ButtonStartSurvey" OnClick="ButtonStartSurvey_Click" runat="server" Text="Start new Survey" />
     </div>
 </asp:Content>

@@ -34,25 +34,25 @@
                 <strong>
                     <asp:Label CssClass="label" runat="server" Text="Bank Services" ></asp:Label>
                 </strong>
-                <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="id_BankDDList" runat="server"></asp:DropDownList>
             </div>
             <div class="controls__ageRange control">
                 <strong>
                     <asp:Label CssClass="label" runat="server" Text="Age Ranges"></asp:Label>
                 </strong>
-                <asp:DropDownList ID="DropDownList2" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="id_AgeDDList" runat="server"></asp:DropDownList>
             </div>
             <div class="controls__livingState control">
                 <strong>
                     <asp:Label CssClass="label" runat="server" Text="States"></asp:Label>
                 </strong>
-                <asp:DropDownList ID="DropDownList3" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="id_StateDDList" runat="server"></asp:DropDownList>
             </div>
             <div class="controls__gender control">
                 <strong>
                     <asp:Label CssClass="label" runat="server" Text="Genders"></asp:Label>
                 </strong>
-                <asp:DropDownList ID="DropDownList4" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="id_GenderDDList" runat="server"></asp:DropDownList>
             </div>
         </div>
         <div class="controls__gridview">
@@ -81,7 +81,6 @@
                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
                 <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
-            <asp:ObjectDataSource ID="RespondentObjectDataSource" runat="server" SelectMethod="GetAllRespondents" TypeName="SurveyWebform.Models.RespondentRepository"></asp:ObjectDataSource>
         </div>
     </div>
 </asp:Content>

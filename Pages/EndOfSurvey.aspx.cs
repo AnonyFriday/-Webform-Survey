@@ -52,5 +52,23 @@ namespace SurveyWebform.Pages
             }
         }
 
+        protected void ButtonStartNewSurvey_Click(object sender, EventArgs e)
+        {
+            // Redirect back to the welcome page
+            // Didn't join the Member Program
+            /*
+             * Save user_id
+             * Name will be Anonymous
+             * Other Field will be null or having values depends on the responndent's response
+             */
+
+            Response.Redirect(Constants.URL_SURVEY);
+        }
+
+        protected void ButtonRegisterUser_Click(object sender, EventArgs e)
+        {
+            // Redirect to Register Member Program
+            // Ask couple of question to fill the information into User 
+        }
     }
 }

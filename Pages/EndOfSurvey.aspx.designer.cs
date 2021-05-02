@@ -40,5 +40,23 @@ namespace SurveyWebform.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button id_ButtonSaveSurvey;
+
+        /// <summary>
+        /// id_ButtonRegisterUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button id_ButtonRegisterUser;
+
+        /// <summary>
+        /// id_ButtonStartSurvey control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button id_ButtonStartSurvey;
     }
 }

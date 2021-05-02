@@ -225,11 +225,11 @@ namespace SurveyWebform.Pages
             // Determine the last question
             if (followUpQuestionList.Count() > 0)
             {
-                Response.Redirect("~/Pages/Survey.aspx");
+                Response.Redirect(Constants.URL_SURVEY);
             }
             else
             {
-                Response.Redirect("~/Pages/EndOfSurvey.aspx");
+                Response.Redirect(Constants.URL_END_OF_SURVEY);
             }
         }
         #endregion

@@ -20,7 +20,6 @@ namespace SurveyWebform.Models
         public DbSet<QType> QTypes { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Respondent> Respondents { get; set; }
-        public DbSet<Session> Session { get; set; }
         #endregion
 
 
